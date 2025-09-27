@@ -1,9 +1,15 @@
-package main
+package basics
 
 import "fmt"
 
+type Employee struct {
+	FirstName string
+	LastName  string
+	Age       int
+}
+
 func main() {
-	//  PascalCase
+	//  PascalCase (PascalCase for struct fields and types)
 	// e.g., MyFunction, MyVariable
 	//  camelCase (variables, functions)
 	// e.g., myFunction, myVariable
@@ -13,5 +19,9 @@ func main() {
 	// e.g., my-function, my-variable
 	//  UPPER_SNAKE_CASE (for constants)
 	// e.g., MY_CONSTANT, MAX_VALUE
-	fmt.Println("Hello, World!")
+
+	const MAXRETRIES = 3
+	var EmployeeID = 1001
+	fmt.Println("Employee ID:", EmployeeID)
+
 }

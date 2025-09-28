@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	start := time.Now()
+	var a, b int = 10, 20
+	var sum int = a + b  // addition
+	var diff int = b - a // subtraction
+	var prod int = a * b // multiplication
+	var quot int = b / a // division
+	var mod int = b % a  // Is remainder of division
+
+	c, d := 2.5, 10.5
+	var sumFloat float64 = c + d  // addition
+	var diffFloat float64 = d - c // subtraction
+	var prodFloat float64 = c * d // multiplication
+	var quotFloat float64 = d / c // division
+
+	fmt.Println("Sum:", sum)
+	fmt.Println("Difference:", diff)
+	fmt.Println("Product:", prod)
+	fmt.Println("Quotient:", quot)
+	fmt.Println("Modulus:", mod)
+	fmt.Println("Float Sum:", sumFloat)
+	fmt.Println("Float Difference:", diffFloat)
+	fmt.Println("Float Product:", prodFloat)
+	fmt.Println("Float Quotient:", quotFloat)
+	elapsed := time.Since(start)
+	fmt.Println("Execution time:", elapsed.Milliseconds(), "Milliseconds")
+
+}

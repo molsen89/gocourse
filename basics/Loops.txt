@@ -1,0 +1,42 @@
+package basics
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	start := time.Now()
+	var processTime float64
+	fmt.Println("Enter your process time in minutes:")
+	fmt.Scan(&processTime)
+	// for loop
+	for i := 0; i < int(processTime); i++ {
+		fmt.Println("Iteration:", i)
+	}
+
+	numbers := []int{1, 2, 3, 4, 5}
+	for index, value := range numbers {
+		fmt.Printf("Index: %v, Value: %v\n", index, value)
+	}
+	rows := 5
+	//Outer loop
+	for i := 1; i <= rows; i++ {
+		//Inner loop
+		for j := 1; j <= rows-i; j++ {
+			fmt.Print(" ")
+		}
+		for k := 1; k <= 2*i-1; k++ {
+			fmt.Print("*")
+		}
+		fmt.Println() // Move to the next line after each row
+	}
+	for i := range 10 {
+		i++
+		fmt.Println(i)
+	}
+	fmt.Println("Happy New Year!")
+
+	elapsed := time.Since(start)
+	fmt.Println("Execution time:", elapsed.Milliseconds(), "Milliseconds")
+}
